@@ -25,12 +25,18 @@ class Program
     /**
      * @ORM\Column(type="text")
      */
-    private $sumarry;
+    private $summary;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $poster;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Category::class)
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $category;
 
     public function getId(): ?int
     {
@@ -49,14 +55,14 @@ class Program
         return $this;
     }
 
-    public function getSumarry(): ?string
+    public function getSummary(): ?string
     {
-        return $this->sumarry;
+        return $this->summary;
     }
 
-    public function setSumarry(string $sumarry): self
+    public function setSummary(string $summary): self
     {
-        $this->sumarry = $sumarry;
+        $this->summary = $summary;
 
         return $this;
     }
@@ -69,6 +75,18 @@ class Program
     public function setPoster(?string $poster): self
     {
         $this->poster = $poster;
+
+        return $this;
+    }
+
+    public function getCategory(): ?Category
+    {
+        return $this->category;
+    }
+
+    public function setCategory(?Category $category): self
+    {
+        $this->category = $category;
 
         return $this;
     }
