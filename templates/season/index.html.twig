@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} saison index {% endblock %}
+{% block body %}
+    <h1>Saisons de chaque série</h1>
+    <ul>
+        {% for season in seasons %}
+           <li class="série_titre">{{ season.program.title }}</li>
+            <li class="saison_titre">Saison {{ season.number }} - {{ season.year }}</li>
+            <li class="saison_description">{{ season.description }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

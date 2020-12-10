@@ -1,7 +1,20 @@
+body {
+  padding: 0 30px 30px 30px;
+}
 h1, h2, p, li {
   font-family: $text-font;
 }
-.program-title {
+.lien  {
   text-decoration: none;
   color: $text-color;
+  font-family: $text-font;
+}
+.saison_titre, .saison_description {
+  list-style-type: none;
+}
+.série_titre {
+  font-size: $title-medium;
+}
+.saison_titre {
+  font-weight: bold;
 }

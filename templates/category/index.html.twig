@@ -9,7 +9,7 @@
                 <li>
                    {{ category.name }}
                     <br>
-                    <a href="{{ path("category_show", {categoryName : category.name}) }}">Voir la fiche</a>
+                    <a class="lien" href="{{ path("category_show", {categoryName : category.name}) }}">Voir la fiche</a>
                 </li>
             </ul>
             {% else %}
