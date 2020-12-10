@@ -5,7 +5,7 @@
     <h1>{{ category }}</h1>
         <ul>
             {% for program in programs %}
-                <li>{{ program.id }} - <a class="program-title" href="{{ path("program_show", { id: program.id }) }}">{{ program.title }}</a></li>
+                <li>{{ program.id }} - <a class="lien" href="{{ path("program_show", { id: program.id }) }}">{{ program.title }}</a></li>
                 <p>{{ program.summary }}</p>
         </ul>
             {% else %}
