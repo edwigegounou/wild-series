@@ -7,9 +7,8 @@
         {% for category in categories %}
             <ul>
                 <li>
-                   {{ category.name }}
-                    <br>
-                    <a class="lien" href="{{ path("category_show", {categoryName : category.name}) }}">Voir la fiche</a>
+                    <a class="lien" href="{{ path("category_show", {categoryName : category.name}) }}">{{ category.name }}
+                        <br></a>
                 </li>
             </ul>
             {% else %}
