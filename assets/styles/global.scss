@@ -1,7 +1,7 @@
 body {
   padding: 0 30px 30px 30px;
 }
-h1, h2, p, li {
+h1, h2, h3, h4, p, li {
   font-family: $text-font;
 }
 .lien  {
@@ -17,4 +17,8 @@ h1, h2, p, li {
 }
 .saison_titre {
   font-weight: bold;
+}
+.poster {
+  width: 25%;
+  height: auto;
 }

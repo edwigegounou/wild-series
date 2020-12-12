@@ -9,3 +9,13 @@
   font-family: $text-font;
   font-size: $texte-size;
 }
+
+.btn-outline-success {
+  color: #80bdff;
+  border-color: #80bdff;
+}
+
+.btn-outline-success:hover {
+  background-color: #80bdff;
+  border-color: white;
+}
