@@ -11,11 +11,13 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
+use Symfony\Component\Validator\Constraints as Assert;
 
 Class ProgramController extends AbstractController
 {
     /**
      * @Route("/programs", name="program_index")
+     * @Assert\EnableAutoMapping()
      */
     public function index(): Response
     {
@@ -36,7 +38,7 @@ Class ProgramController extends AbstractController
         $program = new Program();
         $form = $this->createForm(ProgramType::class, $program);
         $form->handleRequest($request);
-        if ($form->isSubmitted()) {
+        if ($form->isSubmitted() && $form->isValid()) {
             $entityLManager = $this->getDoctrine()->getManager();
             $entityLManager->persist($program);
             $entityLManager->flush();

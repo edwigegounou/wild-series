@@ -12,11 +12,11 @@
                 <td>{{ season.id }}</td>
             </tr>
             <tr>
-                <th>Number</th>
+                <th>Numéro</th>
                 <td>{{ season.number }}</td>
             </tr>
             <tr>
-                <th>Year</th>
+                <th>Année</th>
                 <td>{{ season.year }}</td>
             </tr>
             <tr>
@@ -26,9 +26,9 @@
         </tbody>
     </table>
 
-    <a href="{{ path('season_index') }}">back to list</a>
+    <a class="lien" href="{{ path('season_index') }}">retour à la liste</a><br>
 
-    <a href="{{ path('season_edit', {'id': season.id}) }}">edit</a>
+    <a class="lien-action" href="{{ path('season_edit', {'id': season.id}) }}">modification</a>
 
     {{ include('season/_delete_form.html.twig') }}
 {% endblock %}
