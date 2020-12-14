@@ -2,7 +2,10 @@ body {
   padding: 0 30px 30px 30px;
   font-family: $text-font;
 }
-
+.lien-action {
+  text-decoration: none;
+  color: $button-color;
+}
 .lien  {
   text-decoration: none;
   color: $text-color;

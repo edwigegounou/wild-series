@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouvel Episode{% endblock %}
+
+{% block body %}
+    <h1>Nouvel Episode</h1>
+
+    {{ include('episode/_form.html.twig') }}
+
+    <a class="lien" href="{{ path('episode_index') }}">retour à la liste</a>
+{% endblock %}
