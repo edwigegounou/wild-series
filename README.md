@@ -7,3 +7,6 @@ https://drive.google.com/file/d/1KRUJMDqUdW-KXRTv7S0UG1kPmNboH99u/view?usp=shari
 
 quete 11
 https://drive.google.com/file/d/1jHdwJHfWs_oyepk4Q_pV7ayYLtMTOmYw/view?usp=sharing
+
+quete 12
+https://www.loom.com/share/7d1a173db7bf45678447e5fe6f88e34e
