@@ -1,14 +1,39 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Episodes{% endblock %}
+{% block title %}Index des épisodes{% endblock %}
 
 {% block body %}
- <h3>Tous les épisodes de toutes les séries</h3>
- <ul>
-  {% for episode in episodes %}
-  <li>
-   {{ episode.season.program.title }} - saison{{ episode.season.number }} - ep {{ episode.number }} - {{ episode.title }}
-  </li>
-  {% endfor %}
- </ul>
+    <h1>Index des épisodes</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Titre</th>
+                <th>Numéro</th>
+                <th>Synopsis</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for episode in episodes %}
+            <tr>
+                <td>{{ episode.id }}</td>
+                <td>{{ episode.title }}</td>
+                <td>{{ episode.number }}</td>
+                <td>{{ episode.synopsis }}</td>
+                <td>
+                    <a class="lien-action" href="{{ path('episode_show', {'id': episode.id}) }}">voir</a>
+                    <a class="lien-action" href="{{ path('episode_edit', {'id': episode.id}) }}">modifier</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">pas d'enregistrement trouvé</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a class="lien" href="{{ path('episode_new') }}">Nouvel épisode</a>
 {% endblock %}

@@ -11,11 +11,11 @@
 }
 
 .btn-outline-success {
-  color: #80bdff;
-  border-color: #80bdff;
+  color: $button-color;
+  border-color: $button-color;
 }
 
 .btn-outline-success:hover {
-  background-color: #80bdff;
+  background-color: $button-color;
   border-color: white;
 }
