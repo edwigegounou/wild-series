@@ -1,6 +1,7 @@
 <?php
 namespace App\Controller;
 
+use App\Entity\Actor;
 use App\Entity\Episode;
 use App\Entity\Program;
 use App\Entity\Season;
@@ -13,10 +14,13 @@ use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Symfony\Component\Validator\Constraints as Assert;
 
+/**
+ * @Route("/programs", name="program_")
+ */
 Class ProgramController extends AbstractController
 {
     /**
-     * @Route("/programs", name="program_index")
+     * @Route("/", name="index")
      * @Assert\EnableAutoMapping()
      */
     public function index(): Response
@@ -31,7 +35,7 @@ Class ProgramController extends AbstractController
     }
 
     /**
-     * @Route("/programs/new", name="program_new")
+     * @Route("/new", name="new")
      */
     public function new(Request $request): Response
     {
@@ -50,7 +54,8 @@ Class ProgramController extends AbstractController
         ]);
     }
     /**
-     * @Route("/show/{id}", name="program_show")
+     * @Route("/{program_id}", name="show")
+     * @ParamConverter("program", class="App\Entity\Program", options={"mapping": {"program_id": "id"}})
      */
     public function show(Program $program): Response
     {
@@ -60,11 +65,11 @@ Class ProgramController extends AbstractController
 
         return $this->render('program/show.html.twig', [
             'program' => $program,
-            'seasons' => $seasons
+            'seasons' => $seasons,
         ]);
     }
     /**
-     * @Route("/programs/{program_id}/seasons/{season_id}", name="program_season_show")
+     * @Route("/{program_id}/seasons/{season_id}", name="season_show")
      * @ParamConverter("program", class="App\Entity\Program", options={"mapping": {"program_id": "id"}})
      * @ParamConverter("season", class="App\Entity\Season", options={"mapping": {"season_id": "id"}})
      */
@@ -82,7 +87,7 @@ Class ProgramController extends AbstractController
         ]);
     }
     /**
-     * @Route("/programs/{program_id}/seasons/{season_id}/episodes/{episode_id}", name="program_episode_show")
+     * @Route("/{program_id}/seasons/{season_id}/episodes/{episode_id}", name="episode_show")
      * @ParamConverter("program", class="App\Entity\Program", options={"mapping": {"program_id": "id"}})
      * @ParamConverter("season", class="App\Entity\Season", options={"mapping": {"season_id": "id"}})
      * @ParamConverter ("episode", class="App\Entity\Episode", options={"mapping": {"episode_id": "id"}})
