@@ -16,7 +16,7 @@
         </li>
         {% endfor %}
     </ul>
-    <a class="lien" href="{{ path('program_show', {id : program.id}) }}">
+    <a class="lien" href="{{ path('program_show', {"program_id" : program.id}) }}">
         Retour à série
     </a>
 {% endblock %}

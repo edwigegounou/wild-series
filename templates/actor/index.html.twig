@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Acteurs{% endblock %}
+
+{% block body %}
+<h1>Liste des acteurs</h1>
+    <ul>
+        {% for actor in actors %}
+        <li>{{ loop.index }} - {{ actor.name }}</li>
+
+        {% else %}
+            <p>Aucun acteur trouvé</p>
+        {% endfor %}
+    </ul>
+{% endblock %}
