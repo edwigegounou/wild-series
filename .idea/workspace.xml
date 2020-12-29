@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="462f2f50-c77f-40b7-885f-87f82cca8d4e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/wild-series.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/wild-series.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/ProgramType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ProgramType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Program.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Program.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,6 +127,8 @@
       <path value="$PROJECT_DIR$/vendor/symfony/var-exporter" />
       <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
       <path value="$PROJECT_DIR$/vendor/symfony/security-guard" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
     </include_path>
   </component>
   <component name="ProjectId" id="1ldklH6rJnG7UWTRlgmBDb1G9ln" />
@@ -129,6 +137,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -154,7 +163,7 @@
       <workItem from="1608048058279" duration="3365000" />
       <workItem from="1608100773585" duration="2093000" />
       <workItem from="1608116334945" duration="61000" />
-      <workItem from="1609086770199" duration="15261000" />
+      <workItem from="1609086770199" duration="26559000" />
     </task>
     <servers />
   </component>
@@ -162,6 +171,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="314" y="59" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1609166892815">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state x="314" y="59" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1294.741/1366.0.1440.900@72.27.1294.741" timestamp="1609166892815" />
     <state x="452" y="271" width="524" height="260" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1" timestamp="1607954041883">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
@@ -171,5 +184,9 @@
     </state>
     <state x="502" y="155" width="424" height="491" key="FileChooserDialogImpl/72.27.1294.741/1366.0.1440.900@72.27.1294.741" timestamp="1608025290017" />
     <state x="502" y="155" width="424" height="491" key="FileChooserDialogImpl/72.27.1294.741@72.27.1294.741" timestamp="1608116393118" />
+    <state x="382" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1609179764412">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state x="382" y="89" width="672" height="678" key="search.everywhere.popup/72.27.1294.741/1366.0.1440.900@72.27.1294.741" timestamp="1609179764412" />
   </component>
 </project>
