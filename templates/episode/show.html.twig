@@ -28,7 +28,7 @@
 
     <a class="lien" href="{{ path('episode_index') }}">retour à la liste</a><br>
 
-    <a class="lien-action" href="{{ path('episode_edit', {'id': episode.id}) }}">modifier</a>
+    <a class="lien-action" href="{{ path('episode_edit', {'slug': episode.slug}) }}">modifier</a>
 
     {{ include('episode/_delete_form.html.twig') }}
 {% endblock %}

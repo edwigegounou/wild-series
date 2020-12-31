@@ -7,9 +7,9 @@
     <h3>Episode n° {{ episode.number }} - {{ episode.title }}</h3>
     <h4>Le synopsis</h4>
     <p>{{ episode.synopsis }}</p>
-    <a class="lien" href="{{ path('program_season_show', {'season_id': season.id, 'program_id' : program.id}) }}">retour à la saison {{ season.number }}
+    <a class="lien" href="{{ path('program_season_show', {'season_id': season.id, 'slug' : program.slug}) }}">retour à la saison {{ season.number }}
     </a><br>
-    <a class="lien" href="{{ path('program_show', {"program_id": program.id}) }}">
+    <a class="lien" href="{{ path('program_show', {"slug": program.slug}) }}">
         Retour à série
     </a>
 
