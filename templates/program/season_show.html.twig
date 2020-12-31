@@ -9,14 +9,14 @@
     <ul>
         {% for episode in episodes %}
         <li>
-            <a class="lien" href="{{ path('program_episode_show', {'program_id':program.id,
-                'season_id':season.id, 'episode_id':episode.id}) }}">
+            <a class="lien" href="{{ path('program_episode_show', {'slug':program.slug,
+                'season_id':season.id, 'episodeSlug':episode.slug}) }}">
            Episode {{ episode.number }} - {{ episode.title }}
             </a>
         </li>
         {% endfor %}
     </ul>
-    <a class="lien" href="{{ path('program_show', {"program_id" : program.id}) }}">
+    <a class="lien" href="{{ path('program_show', {"slug" : program.slug}) }}">
         Retour à série
     </a>
 {% endblock %}
