@@ -1,0 +1,9 @@
+{% extends 'layoutEmail.html.twig' %}
+{% block title %}Nouvelle Série{% endblock %}
+
+{% block programMail %}
+<h1>Nouvelle Série {{ program.title }} créée</h1>
+<p>Bonjour, la nouvelle série {{ program.title }} est arrivée sur Wild Séries</p>
+<p>Synopsis : {{ program.summary }}</p>
+{% endblock %}
+
