@@ -12,9 +12,8 @@ class SeasonFixtures extends Fixture implements DependentFixtureInterface
 {
     public function load(ObjectManager $manager)
     {
-        // $product = new Product();
-        // $manager->persist($product);
-        for($i = 1; $i < 100; $i++) {
+
+        for($i = 1; $i <= 100; $i++) {
             $season = new Season();
             $faker = Faker\Factory::create('fr_FR');
             $season->setNumber($faker->randomDigitNotNull);

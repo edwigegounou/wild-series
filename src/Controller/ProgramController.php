@@ -2,9 +2,11 @@
 namespace App\Controller;
 
 use App\Entity\Actor;
+use App\Entity\Comment;
 use App\Entity\Episode;
 use App\Entity\Program;
 use App\Entity\Season;
+use App\Form\CommentType;
 use App\Form\ProgramType;
 use App\Service\Slugify;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -108,13 +110,26 @@ Class ProgramController extends AbstractController
      * @ParamConverter ("episode", class="App\Entity\Episode", options={"mapping": {"episodeSlug": "slug"}})
      */
 
-    public function showEpisode(Program $program, Season $season, Episode $episode): Response
+    public function showEpisode(Program $program, Season $season, Episode $episode, Request $request): Response
     {
+        $comment = new Comment();
+        $form = $this->createForm(CommentType::class, $comment);
+        $form->handleRequest($request);
+        $comment->setAuthor($this->getUser());
+        $comment->setEpisode($episode);
+
+        if($form->isSubmitted() && $form->isValid())
+        {
+            $entityManager=$this->getDoctrine()->getManager();
+            $entityManager->persist($comment);
+            $entityManager->flush();
+        }
         return $this->render ('program/episode_show.html.twig',
         [
             'program'=>$program,
             'season'=>$season,
-            'episode'=>$episode
+            'episode'=>$episode,
+            'form'=>$form->createView(),
         ]);
     }
 }
