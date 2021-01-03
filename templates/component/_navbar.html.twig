@@ -16,18 +16,26 @@
                 <li class="nav-item">
                     <a class="nav-link nav-click" href="#">Mes Favorites</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-click" href="{{ path ('app_register') }}">S'inscrire</a>
+                </li>
             </ul>
+            <div>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        {% if app.user %}
+                            {{ app.user.email }}
+                            <a class="nav-link nav-click" href="{{ path('app_logout') }}">Deconnexion</a>
+                        {% else %}
+                            <a class="nav-link nav-click" href="{{ path('app_login') }}">Connexion</a>
+                        {% endif %}
+                    </li>
+                </ul>
+            </div>
             <form class="form-inline my-2 my-lg-0 nav-click">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0 button-search" type="submit">Search</button>
             </form>
-        </div>
-        <div>
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link nav-click" href="/log/login">Connexion</a>
-                </li>
-            </ul>
         </div>
     </nav>
 </div>

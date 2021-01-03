@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}index des commentaires{% endblock %}
+
+{% block body %}
+{% for commentOne in comments %}
+<p>{{ loop.index }} - {{ commentOne.comment }} - {{ commentOne.rate }}</p>
+    {% endfor %}
+{% endblock %}

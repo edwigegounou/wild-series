@@ -12,5 +12,18 @@
     <a class="lien" href="{{ path('program_show', {"slug": program.slug}) }}">
         Retour à série
     </a>
+    <h6>Les commentaires</h6>
+    {% for comment in episode.comments %}
+        <ul>
+            <li>
+                {{ loop.index }} - Note {{ comment.rate }} - de {{ comment.author.username }}<br>
+                {{ comment.comment }}
+            </li>
+        </ul>
+    {% endfor %}
 
+    {% if app.user %}
+        <h6>Ajouter un commentaire</h6>
+    {{ include ('comment/_form.html.twig') }}
+    {% endif %}
 {% endblock %}
