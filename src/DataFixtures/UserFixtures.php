@@ -9,7 +9,7 @@ use Doctrine\Persistence\ObjectManager;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Faker;
 
-class UserFixtures extends Fixture implements DependentFixtureInterface
+class UserFixtures extends Fixture
 {
     private $passwordEncoder;
 
@@ -31,6 +31,7 @@ class UserFixtures extends Fixture implements DependentFixtureInterface
         ));
 
         $manager->persist($contributor);
+        $this->addReference('contributor', $contributor);
 
         $admin = new User();
         $faker = Faker\Factory::create('fr_FR');
@@ -48,8 +49,5 @@ class UserFixtures extends Fixture implements DependentFixtureInterface
         $manager->flush();
     }
 
-    public function getDependencies()
-    {
-        return [EpisodeFixtures::class];
-    }
+
 }

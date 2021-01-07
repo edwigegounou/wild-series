@@ -23,6 +23,9 @@
                     <li>Aucun acteur pour cette série</li>
                 {% endfor %}
             </ul>
+            {% if is_granted('ROLE_ADMIN') %}
+            <a class="lien-action" href="{{ path('program_edit', {'slug': program.slug}) }}">Modifier</a><br>
+            {% endif %}
             <a class="lien" href="{{ path('program_index') }}">
                 Retour à la liste des séries
             </a>
