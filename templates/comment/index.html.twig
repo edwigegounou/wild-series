@@ -4,6 +4,7 @@
 
 {% block body %}
 {% for commentOne in comments %}
-<p>{{ loop.index }} - {{ commentOne.comment }} - {{ commentOne.rate }}</p>
+    <a class="lien" href="{{ path ('comment_show', {'id' : commentOne.id}) }}">
+<p>{{ loop.index }} - {{ commentOne.comment }} - {{ commentOne.rate }}</p></a>
     {% endfor %}
 {% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Comments{% endblock %}
+
+{% block body %}
+    <h1>Commentaires</h1>
+
+    <table class="table">
+        <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{ comment.id}}</td>
+        </tr>
+        <tr>
+            <th>Commentaire</th>
+            <td>{{ comment.comment }}</td>
+        </tr>
+        <tr>
+            <th>Note</th>
+            <td>{{ comment.rate }}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <a class="lien" href="{{ path('comment_index') }}">retour à la liste</a><br>
+
+    {% if ((is_granted('ROLE_CONTRIBUTOR') and (app.user.id == comment.author.id)) or is_granted('ROLE_ADMIN')) %}
+        {{ include ('comment/_delete_form.html.twig') }}
+    {% endif %}
+    <a class="lien" href="{{ path('comment_index') }}">
+        Retour à la liste des commentaires
+    </a>
+{% endblock %}
