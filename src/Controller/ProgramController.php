@@ -52,6 +52,8 @@ Class ProgramController extends AbstractController
             $entityLManager->persist($program);
             $entityLManager->flush();
 
+            $this->addFlash('success', 'La nouvelle série a bien été créée');
+
             $email = (new Email())
                 ->from($this->getParameter('mailer_from'))
                 ->to('your_email@example.com')
@@ -59,6 +61,8 @@ Class ProgramController extends AbstractController
                 ->html($this->renderView('program/newProgramEmail.html.twig', ['program' => $program]));
 
             $mailer->send($email);
+
+
             return $this->redirectToRoute('program_index');
         }
         return $this->render ('program/new.html.twig',
@@ -148,6 +152,7 @@ Class ProgramController extends AbstractController
         if($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
+            $this->addFlash('success', 'La série a bien été modifiée');
             return $this->redirectToRoute('program_index');
         }
         return $this->render('program/edit.html.twig',

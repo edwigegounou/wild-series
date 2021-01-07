@@ -7,7 +7,7 @@
     <p>Séries dans lesquelles il joue:</p>
     <ul>
         {% for program in actor.programs %}
-          <li><a class="lien" href="{{ path('program_show', {'program_id': program.id}) }}">{{ program.title }}</a></li>
+          <li><a class="lien" href="{{ path('program_show', {'slug': program.slug}) }}">{{ program.title }}</a></li>
         {% endfor %}
     </ul>
 {% endblock %}

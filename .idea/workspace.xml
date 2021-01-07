@@ -1,34 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="462f2f50-c77f-40b7-885f-87f82cca8d4e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/comment/show.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/program/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/templates/comment/_delete_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201130135354.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201130140335.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201207084906.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201207095510.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201215064102.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201231103538.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201231152511.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20210102134814.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20210102160126.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/CommentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CommentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/EpisodeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/EpisodeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ProgramController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProgramController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/ProgramFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/ProgramFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Program.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Program.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/comment/new.hml.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/comment/new.hml.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/program/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/program/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/program/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/program/show.html.twig" afterDir="false" />
-    </list>
+    <list default="true" id="462f2f50-c77f-40b7-885f-87f82cca8d4e" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -159,7 +132,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/projet3/bordeaux-202009-php-project3-diets" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -196,7 +169,7 @@
       <workItem from="1609934119724" duration="2787000" />
       <workItem from="1609946365834" duration="65000" />
       <workItem from="1609948015551" duration="1245000" />
-      <workItem from="1610003396753" duration="1354000" />
+      <workItem from="1610003396753" duration="3490000" />
     </task>
     <servers />
   </component>
@@ -220,10 +193,10 @@
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state x="452" y="271" width="524" height="260" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1/72.27.1294.741/1366.0.1440.900@72.27.1294.741" timestamp="1607954041883" />
-    <state x="502" y="155" width="424" height="491" key="FileChooserDialogImpl" timestamp="1609936905707">
+    <state x="502" y="155" width="424" height="491" key="FileChooserDialogImpl" timestamp="1610005035962">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state x="502" y="155" width="424" height="491" key="FileChooserDialogImpl/72.27.1294.741/1366.0.1440.900@72.27.1294.741" timestamp="1609936905707" />
+    <state x="502" y="155" width="424" height="491" key="FileChooserDialogImpl/72.27.1294.741/1366.0.1440.900@72.27.1294.741" timestamp="1610005035962" />
     <state x="502" y="155" width="424" height="491" key="FileChooserDialogImpl/72.27.1294.741@72.27.1294.741" timestamp="1608116393118" />
     <state x="220" y="103" width="657" height="512" key="NewPhpClassDialog" timestamp="1609408530542">
       <screen x="72" y="27" width="1294" height="741" />
