@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon espace{% endblock %}
+
+{% block body %}
+    {% if app.user %}
+        <h2>Mon compte</h2>
+        {% if userPrograms is not empty %}
+            <p>liste des séries que tu as ajoutées</p>
+        <ul>
+        {% for userProgram in userPrograms|reverse %}
+           <li><a class="lien" href="{{ path('program_show', {'slug' : userProgram.slug}) }}">{{ userProgram.title }}</a></li>
+
+        {% endfor %}
+        </ul>
+            {% else %}
+            <p>tu n'as pas encore ajouté de séries</p>
+            {% endif %}
+    {% endif %}
+
+
+{% endblock %}
