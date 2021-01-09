@@ -16,20 +16,28 @@
                 <li class="nav-item">
                     <a class="nav-link nav-click" href="{{path ('comment_index') }}">Commentaires</a>
                 </li>
+                <li class="nav-item active">
+                    {% if app.user %}
+                <li class="nav-item"> {{ app.user.email }}
+
+                    <a class="nav-link nav-click" href="{{ path('my_profile') }}">Mon compte</a>
+                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-click" href="{{ path('app_logout') }}">Deconnexion</a>
+                   </li>
+                    {% else %}
                 <li class="nav-item">
-                    <a class="nav-link nav-click" href="{{ path ('app_register') }}">S'inscrire</a>
+                        <a class="nav-link nav-click" href="{{ path ('app_register') }}">S'inscrire</a>
                 </li>
+                <li class="nav-item">
+                        <a class="nav-link nav-click" href="{{ path('app_login') }}">Connexion</a>
+                    {% endif %}
+                </li>
+
             </ul>
             <div>
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        {% if app.user %}
-                            {{ app.user.email }}
-                            <a class="nav-link nav-click" href="{{ path('app_logout') }}">Deconnexion</a>
-                        {% else %}
-                            <a class="nav-link nav-click" href="{{ path('app_login') }}">Connexion</a>
-                        {% endif %}
-                    </li>
+
                 </ul>
             </div>
             <form class="form-inline my-2 my-lg-0 nav-click">
